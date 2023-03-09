@@ -14,6 +14,7 @@ hbs.registerHelper('dateFormat', require('handlebars-dateformat'));
 hbs.registerHelper('sequelizeGet', function(obj, col) {
   return obj.get(col);
 }); 
+hbs.registerPartial('navbar', '{{navbar}}');
 
 const app = express();
 const http = require('http').Server(app);

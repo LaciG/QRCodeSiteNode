@@ -3,5 +3,9 @@ let router = express.Router();
 require('dotenv').config();
 
 exports.index = (req, res) => {
-    res.render('index', {layout: 'layout.hbs', title: 'MCC QRCode Site'})
+    res.render('index', {layout: 'indexLayout.hbs', title: 'MCC QRCode Site'})
+}
+
+exports.home = (req, res) => { //Ide már a belogolt user kell, megírni majd a login processt, most csak visual miatt simán rendereli
+    res.render('home', {layout: 'layout.hbs', title: 'Dashboard'})
 }

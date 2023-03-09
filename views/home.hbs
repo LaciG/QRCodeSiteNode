@@ -1,0 +1,871 @@
+<!-- BEGIN Page Wrapper -->
+        <div class="page-wrapper">
+            <div class="page-inner">
+                <!-- BEGIN Left Aside -->
+                <aside class="page-sidebar">
+                    <!-- BEGIN PRIMARY NAVIGATION -->
+                    <nav id="js-primary-nav" class="primary-nav" role="navigation">
+                        <div class="nav-filter">
+                            <div class="position-relative">
+                                <input type="text" id="nav_filter_input" placeholder="Filter menu" class="form-control" tabindex="0">
+                                <a href="#" onclick="return false;" class="btn-primary btn-search-close js-waves-off" data-action="toggle" data-class="list-filter-active" data-target=".page-sidebar">
+                                    <i class="fal fa-chevron-up"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <img src="img/demo/avatars/avatar-admin.png" class="profile-image rounded-circle" alt="László Gábor">
+                            <div class="info-card-text">
+                                <a href="#" class="d-flex align-items-center text-white">
+                                    <span class="text-truncate text-truncate-sm d-inline-block">
+                                        László Gábor
+                                    </span>
+                                </a>
+                            </div>
+                            <img src="img/card-backgrounds/cover-2-lg.png" class="cover" alt="cover">
+                        </div>
+                        <ul id="js-nav-menu" class="nav-menu">
+                            <li class="active open">
+                                <a href="#" title="Application Intel" data-filter-tags="application intel">
+                                    <i class="fal fa-window"></i>
+                                    <span class="nav-link-text" data-i18n="nav.application_intel">Események kezelése</span>
+                                </a>
+                                <ul>
+                                    <li class="active">
+                                        <a href="intel_marketing_dashboard.html" title="Marketing Dashboard" data-filter-tags="application intel marketing dashboard">
+                                            <span class="nav-link-text" data-i18n="nav.application_intel_marketing_dashboard">Közelgő események</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="intel_analytics_dashboard.html" title="Analytics Dashboard" data-filter-tags="application intel analytics dashboard">
+                                            <span class="nav-link-text" data-i18n="nav.application_intel_analytics_dashboard">Összes esemény</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="intel_introduction.html" title="Introduction" data-filter-tags="application intel introduction">
+                                            <span class="nav-link-text" data-i18n="nav.application_intel_introduction">Véget ért események</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" title="Theme Settings" data-filter-tags="theme settings">
+                                    <i class="fal fa-chart-pie"></i>
+                                    <span class="nav-link-text" data-i18n="nav.theme_settings">Statisztika</span>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="settings_how_it_works.html" title="How it works" data-filter-tags="theme settings how it works">
+                                            <span class="nav-link-text" data-i18n="nav.theme_settings_how_it_works">How it works</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="settings_layout_options.html" title="Layout Options" data-filter-tags="theme settings layout options">
+                                            <span class="nav-link-text" data-i18n="nav.theme_settings_layout_options">Layout Options</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="settings_skin_options.html" title="Skin Options" data-filter-tags="theme settings skin options">
+                                            <span class="nav-link-text" data-i18n="nav.theme_settings_skin_options">Skin Options</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="settings_saving_db.html" title="Saving to Database" data-filter-tags="theme settings saving to database">
+                                            <span class="nav-link-text" data-i18n="nav.theme_settings_saving_to_database">Saving to Database</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <div class="filter-message js-filter-message bg-success-600"></div>
+                    </nav>
+                    <!-- END PRIMARY NAVIGATION -->
+                    <!-- NAV FOOTER -->
+                    <div class="nav-footer shadow-top">
+                        <a href="#" onclick="return false;" data-action="toggle" data-class="nav-function-minify" class="hidden-md-down">
+                            <i class="ni ni-chevron-right"></i>
+                            <i class="ni ni-chevron-right"></i>
+                        </a>
+                        <ul class="list-table m-auto nav-footer-buttons">
+                            <li>
+                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Chat logs">
+                                    <i class="fal fa-comments"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Support Chat">
+                                    <i class="fal fa-life-ring"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" data-toggle="tooltip" data-placement="top" title="Make a call">
+                                    <i class="fal fa-phone"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div> <!-- END NAV FOOTER -->
+                </aside>
+                <!-- END Left Aside -->
+                <div class="page-content-wrapper">
+                    <!-- BEGIN Page Content -->
+                    <!-- the #js-page-content id is needed for some plugins to initialize -->
+                    <main id="js-page-content" role="main" class="page-content">
+                        <!-- DOC: mobile button appears during mobile width -->
+                        <div class="hidden-lg-up">
+                            <a href="#" class="header-btn btn press-scale-down" data-action="toggle" data-class="mobile-nav-on">
+                                <i class="ni ni-menu"></i>
+                            </a>
+                        </div>
+                        <div class="subheader">
+                            <h1 class="subheader-title">
+                                <i class='subheader-icon fal fa-chart-area'></i> Marketing <span class='fw-300'>Dashboard</span>
+                                <small>
+                                </small>
+                            </h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="p-3 bg-primary-300 rounded overflow-hidden position-relative text-white mb-g">
+                                    <div class="">
+                                        <h3 class="display-4 d-block l-h-n m-0 fw-500">
+                                            21.5k
+                                            <small class="m-0 l-h-n">users signed up</small>
+                                        </h3>
+                                    </div>
+                                    <i class="fal fa-user position-absolute pos-right pos-bottom opacity-15 mb-n1 mr-n1" style="font-size:6rem"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="p-3 bg-warning-400 rounded overflow-hidden position-relative text-white mb-g">
+                                    <div class="">
+                                        <h3 class="display-4 d-block l-h-n m-0 fw-500">
+                                            $10,203
+                                            <small class="m-0 l-h-n">Visual Index Figure</small>
+                                        </h3>
+                                    </div>
+                                    <i class="fal fa-gem position-absolute pos-right pos-bottom opacity-15  mb-n1 mr-n4" style="font-size: 6rem;"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="p-3 bg-success-200 rounded overflow-hidden position-relative text-white mb-g">
+                                    <div class="">
+                                        <h3 class="display-4 d-block l-h-n m-0 fw-500">
+                                            - 103.72
+                                            <small class="m-0 l-h-n">Offset Balance Ratio</small>
+                                        </h3>
+                                    </div>
+                                    <i class="fal fa-lightbulb position-absolute pos-right pos-bottom opacity-15 mb-n5 mr-n6" style="font-size: 8rem;"></i>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <div class="p-3 bg-info-200 rounded overflow-hidden position-relative text-white mb-g">
+                                    <div class="">
+                                        <h3 class="display-4 d-block l-h-n m-0 fw-500">
+                                            +40%
+                                            <small class="m-0 l-h-n">Product level increase</small>
+                                        </h3>
+                                    </div>
+                                    <i class="fal fa-globe position-absolute pos-right pos-bottom opacity-15 mb-n1 mr-n4" style="font-size: 6rem;"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div id="panel-5" class="panel">
+                                    <div class="panel-hdr">
+                                        <h2>
+                                            Közelgő <span class="fw-300"><i>események</i></span>
+                                        </h2>
+                                    </div>
+                                    <div class="panel-container show">
+                                        <div class="panel-content">
+                                            <div class="frame-wrap">
+                                                <table class="table table-bordered table-hover m-0">
+                                                    <thead class="thead-themed">
+                                                        <tr>
+                                                            <th>Esemény neve</th>
+                                                            <th>Esemény időpontja</th>
+                                                            <th>Esemény státusza</th>
+                                                            <th>Résztvevők</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">Esemény első</th>
+                                                            <td>2023-03-14 17:00</td>
+                                                            <td><span class="badge badge-success badge-pill">Aktív</span></td>
+                                                            <td><button type="button" class="btn btn-info waves-effect waves-themed">Résztvevők megtekintése</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Esemény Második</th>
+                                                            <td>2023-03-14 17:00</td>
+                                                            <td><span class="badge badge-danger badge-pill">Disabled</span></td>
+                                                            <td><button type="button" class="btn btn-info waves-effect waves-themed">Résztvevők megtekintése</button></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th scope="row">Esemény harmadik</th>
+                                                            <td>2023-03-14 17:00</td>
+                                                            <td><span class="badge badge-warning badge-pill">Inactive</span></td>
+                                                            <td><button type="button" class="btn btn-info waves-effect waves-themed">Résztvevők megtekintése</button></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div id="panel-1" class="panel">
+                                    <div class="panel-hdr">
+                                        <h2>
+                                            Naptár 
+                                        </h2>
+                                        <div class="panel-toolbar">
+                                            <button class="btn btn-panel" data-action="panel-collapse" data-toggle="tooltip" data-offset="0,10" data-original-title="Collapse"></button>
+                                            <button class="btn btn-panel" data-action="panel-fullscreen" data-toggle="tooltip" data-offset="0,10" data-original-title="Fullscreen"></button>
+                                            <button class="btn btn-panel" data-action="panel-close" data-toggle="tooltip" data-offset="0,10" data-original-title="Close"></button>
+                                        </div>
+                                    </div>
+                                    <div class="panel-container show">
+                                        <div class="panel-content">
+                                            <div id="calendar"></div>
+                                            <!-- Modal : TODO -->
+                                            <!-- Modal end -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                    <!-- this overlay is activated only when mobile menu is triggered -->
+                    <div class="page-content-overlay" data-action="toggle" data-class="mobile-nav-on"></div> <!-- END Page Content -->
+                </div>
+            </div>
+        </div>
+        <!-- END Page Wrapper -->        
+        
+        <script src="js/vendors.bundle.js"></script>
+        <script src="js/app.bundle.js"></script>
+        <script src="js/dependency/moment/moment.js"></script>
+
+        <!-- The order of scripts is irrelevant. Please check out the plugin pages for more details about these plugins below: -->
+        <script src="js/statistics/peity/peity.bundle.js"></script>
+        <script src="js/statistics/flot/flot.bundle.js"></script>
+        <script src="js/statistics/easypiechart/easypiechart.bundle.js"></script>
+        <script src="js/datagrid/datatables/datatables.bundle.js"></script>
+        <script src="js/miscellaneous/fullcalendar/fullcalendar.bundle.js"></script>
+
+        <script>
+            var todayDate = moment().startOf('day');
+            var YM = todayDate.format('YYYY-MM');
+            var YESTERDAY = todayDate.clone().subtract(1, 'day').format('YYYY-MM-DD');
+            var TODAY = todayDate.format('YYYY-MM-DD');
+            var TOMORROW = todayDate.clone().add(1, 'day').format('YYYY-MM-DD');
+
+            document.addEventListener('DOMContentLoaded', function()
+            {
+                var calendarEl = document.getElementById('calendar');
+
+                var calendar = new FullCalendar.Calendar(calendarEl,
+                {
+                    plugins: ['dayGrid', 'list', 'timeGrid', 'interaction', 'bootstrap'],
+                    themeSystem: 'bootstrap',
+                    timeZone: 'UTC',
+                    dateAlignment: "month", //week, month
+                    buttonText:
+                    {
+                        today: 'today',
+                        month: 'month',
+                        week: 'week',
+                        day: 'day',
+                        list: 'list'
+                    },
+                    eventTimeFormat:
+                    {
+                        hour: 'numeric',
+                        minute: '2-digit',
+                        meridiem: 'short'
+                    },
+                    navLinks: true,
+                    header:
+                    {
+                        left: 'prev,next today addEventButton',
+                        center: 'title',
+                        right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek'
+                    },
+                    footer:
+                    {
+                        left: '',
+                        center: '',
+                        right: ''
+                    },
+                    customButtons:
+                    {
+                        addEventButton:
+                        {
+                            text: '+',
+                            click: function()
+                            {
+                                var dateStr = prompt('Enter a date in YYYY-MM-DD format');
+                                var date = new Date(dateStr + 'T00:00:00'); // will be in local time
+
+                                if (!isNaN(date.valueOf()))
+                                { // valid?
+                                    calendar.addEvent(
+                                    {
+                                        title: 'dynamic event',
+                                        start: date,
+                                        allDay: true
+                                    });
+                                    alert('Great. Now, update your database...');
+                                }
+                                else
+                                {
+                                    alert('Invalid date.');
+                                }
+                            }
+                        }
+                    },
+                    //height: 700,
+                    editable: true,
+                    eventLimit: true, // allow "more" link when too many events
+                    events: [
+                    {
+                        title: 'All Day Event',
+                        start: YM + '-01',
+                        description: 'This is a test description', //this is currently bugged: https://github.com/fullcalendar/fullcalendar/issues/1795
+                        className: "border-warning bg-warning text-dark"
+                    },
+                    {
+                        title: 'Reporting',
+                        start: YM + '-14T13:30:00',
+                        end: YM + '-14',
+                        className: "bg-white border-primary text-primary"
+                    },
+                    {
+                        title: 'Company Trip',
+                        start: YM + '-02',
+                        end: YM + '-03',
+                        className: "bg-primary border-primary text-white"
+                    },
+                    {
+                        title: 'NextGen Expo 2019 - Product Release',
+                        start: YM + '-03',
+                        end: YM + '-05',
+                        className: "bg-info border-info text-white"
+                    },
+                    {
+                        title: 'Dinner',
+                        start: YM + '-12',
+                        end: YM + '-10'
+                    },
+                    {
+                        id: 999,
+                        title: 'Repeating Event',
+                        start: YM + '-09T16:00:00',
+                        className: "bg-danger border-danger text-white"
+                    },
+                    {
+                        id: 1000,
+                        title: 'Repeating Event',
+                        start: YM + '-16T16:00:00'
+                    },
+                    {
+                        title: 'Conference',
+                        start: YESTERDAY,
+                        end: TOMORROW,
+                        className: "bg-success border-success text-white"
+                    },
+                    {
+                        title: 'Meeting',
+                        start: TODAY + 'T10:30:00',
+                        end: TODAY + 'T12:30:00',
+                        className: "bg-primary text-white border-primary"
+                    },
+                    {
+                        title: 'Lunch',
+                        start: TODAY + 'T12:00:00',
+                        className: "bg-info border-info"
+                    },
+                    {
+                        title: 'Meeting',
+                        start: TODAY + 'T14:30:00',
+                        className: "bg-warning text-dark border-warning"
+                    },
+                    {
+                        title: 'Happy Hour',
+                        start: TODAY + 'T17:30:00',
+                        className: "bg-success border-success text-white"
+                    },
+                    {
+                        title: 'Dinner',
+                        start: TODAY + 'T20:00:00',
+                        className: "bg-danger border-danger text-white"
+                    },
+                    {
+                        title: 'Birthday Party',
+                        start: TOMORROW + 'T07:00:00',
+                        className: "bg-primary text-white border-primary text-white"
+                    },
+                    {
+                        title: 'Gotbootstrap Meeting',
+                        url: 'http://gotbootstrap.com/',
+                        start: YM + '-28',
+                        className: "bg-info border-info text-white"
+                    }],
+                    /*eventClick:  function(info) {
+                    	$('#calendarModal .modal-title .js-event-title').text(info.event.title);
+                    	$('#calendarModal .js-event-description').text(info.event.description);
+                    	$('#calendarModal .js-event-url').attr('href',info.event.url);
+                    	$('#calendarModal').modal();
+                    	console.log(info.event.className);
+                    	console.log(info.event.title);
+                    	console.log(info.event.description);
+                    	console.log(info.event.url);
+                    },*/
+                    /*viewRender: function(view) {
+                    	localStorage.setItem('calendarDefaultView',view.name);
+                    	$('.fc-toolbar .btn-primary').removeClass('btn-primary').addClass('btn-outline-secondary');
+                    },*/
+
+                });
+
+                calendar.render();
+            });
+
+        </script>
+
+        <script>
+            /* defined datas */
+            var dataTargetProfit = [
+                [1354586000000, 153],
+                [1364587000000, 658],
+                [1374588000000, 198],
+                [1384589000000, 663],
+                [1394590000000, 801],
+                [1404591000000, 1080],
+                [1414592000000, 353],
+                [1424593000000, 749],
+                [1434594000000, 523],
+                [1444595000000, 258],
+                [1454596000000, 688],
+                [1464597000000, 364]
+            ]
+            var dataProfit = [
+                [1354586000000, 53],
+                [1364587000000, 65],
+                [1374588000000, 98],
+                [1384589000000, 83],
+                [1394590000000, 980],
+                [1404591000000, 808],
+                [1414592000000, 720],
+                [1424593000000, 674],
+                [1434594000000, 23],
+                [1444595000000, 79],
+                [1454596000000, 88],
+                [1464597000000, 36]
+            ]
+            var dataSignups = [
+                [1354586000000, 647],
+                [1364587000000, 435],
+                [1374588000000, 784],
+                [1384589000000, 346],
+                [1394590000000, 487],
+                [1404591000000, 463],
+                [1414592000000, 479],
+                [1424593000000, 236],
+                [1434594000000, 843],
+                [1444595000000, 657],
+                [1454596000000, 241],
+                [1464597000000, 341]
+            ]
+            var dataSet1 = [
+                [0, 10],
+                [100, 8],
+                [200, 7],
+                [300, 5],
+                [400, 4],
+                [500, 6],
+                [600, 3],
+                [700, 2]
+            ];
+            var dataSet2 = [
+                [0, 9],
+                [100, 6],
+                [200, 5],
+                [300, 3],
+                [400, 3],
+                [500, 5],
+                [600, 2],
+                [700, 1]
+            ];
+
+            $(document).ready(function()
+            {
+
+                /* init datatables */
+                $('#dt-basic-example').dataTable(
+                {
+                    responsive: true,
+                    dom: "<'row mb-3'<'col-sm-12 col-md-6 d-flex align-items-center justify-content-start'f><'col-sm-12 col-md-6 d-flex align-items-center justify-content-end'B>>" +
+                        "<'row'<'col-sm-12'tr>>" +
+                        "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+                    buttons: [
+                        {
+                            extend: 'colvis',
+                            text: 'Column Visibility',
+                            titleAttr: 'Col visibility',
+                            className: 'btn-outline-default'
+                        },
+                        {
+                            extend: 'csvHtml5',
+                            text: 'CSV',
+                            titleAttr: 'Generate CSV',
+                            className: 'btn-outline-default'
+                        },
+                        {
+                            extend: 'copyHtml5',
+                            text: 'Copy',
+                            titleAttr: 'Copy to clipboard',
+                            className: 'btn-outline-default'
+                        },
+                        {
+                            extend: 'print',
+                            text: '<i class="fal fa-print"></i>',
+                            titleAttr: 'Print Table',
+                            className: 'btn-outline-default'
+                        }
+
+                    ],
+                    columnDefs: [
+                        {
+                            targets: -1,
+                            title: '',
+                            orderable: false,
+                            render: function(data, type, full, meta)
+                            {
+                                return "\n\t\t\t\t\t\t<a href='javascript:void(0);' class='btn btn-sm btn-icon btn-outline-danger rounded-circle mr-1' title='Delete Record'>\n\t\t\t\t\t\t\t<i class=\"fal fa-times\"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t\t<div class='dropdown d-inline-block dropleft'>\n\t\t\t\t\t\t\t<a href='#'' class='btn btn-sm btn-icon btn-outline-primary rounded-circle shadow-0' data-toggle='dropdown' aria-expanded='true' title='More options'>\n\t\t\t\t\t\t\t\t<i class=\"fal fa-ellipsis-v\"></i>\n\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t<div class='dropdown-menu'>\n\t\t\t\t\t\t\t\t<a class='dropdown-item' href='javascript:void(0);'>Change Status</a>\n\t\t\t\t\t\t\t\t<a class='dropdown-item' href='javascript:void(0);'>Generate Report</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</div>";
+                            },
+                        },
+
+                    ]
+
+                });
+
+
+                /* flot toggle example */
+                var flot_toggle = function()
+                {
+
+                    var data = [
+                    {
+                        label: "Target Profit",
+                        data: dataTargetProfit,
+                        color: myapp_get_color.info_400,
+                        bars:
+                        {
+                            show: true,
+                            align: "center",
+                            barWidth: 30 * 30 * 60 * 1000 * 80,
+                            lineWidth: 0,
+                            /*fillColor: {
+                            	colors: [myapp_get_color.primary_500, myapp_get_color.primary_900]
+                            },*/
+                            fillColor:
+                            {
+                                colors: [
+                                {
+                                    opacity: 0.9
+                                },
+                                {
+                                    opacity: 0.1
+                                }]
+                            }
+                        },
+                        highlightColor: 'rgba(255,255,255,0.3)',
+                        shadowSize: 0
+                    },
+                    {
+                        label: "Actual Profit",
+                        data: dataProfit,
+                        color: myapp_get_color.warning_500,
+                        lines:
+                        {
+                            show: true,
+                            lineWidth: 2
+                        },
+                        shadowSize: 0,
+                        points:
+                        {
+                            show: true
+                        }
+                    },
+                    {
+                        label: "User Signups",
+                        data: dataSignups,
+                        color: myapp_get_color.success_500,
+                        lines:
+                        {
+                            show: true,
+                            lineWidth: 2
+                        },
+                        shadowSize: 0,
+                        points:
+                        {
+                            show: true
+                        }
+                    }]
+
+                    var options = {
+                        grid:
+                        {
+                            hoverable: true,
+                            clickable: true,
+                            tickColor: '#f2f2f2',
+                            borderWidth: 1,
+                            borderColor: '#f2f2f2'
+                        },
+                        tooltip: true,
+                        tooltipOpts:
+                        {
+                            cssClass: 'tooltip-inner',
+                            defaultTheme: false
+                        },
+                        xaxis:
+                        {
+                            mode: "time"
+                        },
+                        yaxes:
+                        {
+                            tickFormatter: function(val, axis)
+                            {
+                                return "$" + val;
+                            },
+                            max: 1200
+                        }
+
+                    };
+
+                    var plot2 = null;
+
+                    function plotNow()
+                    {
+                        var d = [];
+                        $("#js-checkbox-toggles").find(':checkbox').each(function()
+                        {
+                            if ($(this).is(':checked'))
+                            {
+                                d.push(data[$(this).attr("name").substr(4, 1)]);
+                            }
+                        });
+                        if (d.length > 0)
+                        {
+                            if (plot2)
+                            {
+                                plot2.setData(d);
+                                plot2.draw();
+                            }
+                            else
+                            {
+                                plot2 = $.plot($("#flot-toggles"), d, options);
+                            }
+                        }
+
+                    };
+
+                    $("#js-checkbox-toggles").find(':checkbox').on('change', function()
+                    {
+                        plotNow();
+                    });
+                    plotNow()
+                }
+                flot_toggle();
+                /* flot toggle example -- end*/
+
+                /* flot area */
+                var flotArea = $.plot($('#flot-area'), [
+                {
+                    data: dataSet1,
+                    label: 'New Customer',
+                    color: myapp_get_color.success_200
+                },
+                {
+                    data: dataSet2,
+                    label: 'Returning Customer',
+                    color: myapp_get_color.info_200
+                }],
+                {
+                    series:
+                    {
+                        lines:
+                        {
+                            show: true,
+                            lineWidth: 2,
+                            fill: true,
+                            fillColor:
+                            {
+                                colors: [
+                                {
+                                    opacity: 0
+                                },
+                                {
+                                    opacity: 0.5
+                                }]
+                            }
+                        },
+                        shadowSize: 0
+                    },
+                    points:
+                    {
+                        show: true,
+                    },
+                    legend:
+                    {
+                        noColumns: 1,
+                        position: 'nw'
+                    },
+                    grid:
+                    {
+                        hoverable: true,
+                        clickable: true,
+                        borderColor: '#ddd',
+                        tickColor: '#ddd',
+                        aboveData: true,
+                        borderWidth: 0,
+                        labelMargin: 5,
+                        backgroundColor: 'transparent'
+                    },
+                    yaxis:
+                    {
+                        tickLength: 1,
+                        min: 0,
+                        max: 15,
+                        color: '#eee',
+                        font:
+                        {
+                            size: 0,
+                            color: '#999'
+                        }
+                    },
+                    xaxis:
+                    {
+                        tickLength: 1,
+                        color: '#eee',
+                        font:
+                        {
+                            size: 10,
+                            color: '#999'
+                        }
+                    }
+
+                });
+                /* flot area -- end */
+
+                var flotVisit = $.plot('#flotVisit', [
+                {
+                    data: [
+                        [3, 0],
+                        [4, 1],
+                        [5, 3],
+                        [6, 3],
+                        [7, 10],
+                        [8, 11],
+                        [9, 12],
+                        [10, 9],
+                        [11, 12],
+                        [12, 8],
+                        [13, 5]
+                    ],
+                    color: myapp_get_color.success_200
+                },
+                {
+                    data: [
+                        [1, 0],
+                        [2, 0],
+                        [3, 1],
+                        [4, 2],
+                        [5, 2],
+                        [6, 5],
+                        [7, 8],
+                        [8, 12],
+                        [9, 9],
+                        [10, 11],
+                        [11, 5]
+                    ],
+                    color: myapp_get_color.info_200
+                }],
+                {
+                    series:
+                    {
+                        shadowSize: 0,
+                        lines:
+                        {
+                            show: true,
+                            lineWidth: 2,
+                            fill: true,
+                            fillColor:
+                            {
+                                colors: [
+                                {
+                                    opacity: 0
+                                },
+                                {
+                                    opacity: 0.12
+                                }]
+                            }
+                        }
+                    },
+                    grid:
+                    {
+                        borderWidth: 0
+                    },
+                    yaxis:
+                    {
+                        min: 0,
+                        max: 15,
+                        tickColor: '#ddd',
+                        ticks: [
+                            [0, ''],
+                            [5, '100K'],
+                            [10, '200K'],
+                            [15, '300K']
+                        ],
+                        font:
+                        {
+                            color: '#444',
+                            size: 10
+                        }
+                    },
+                    xaxis:
+                    {
+
+                        tickColor: '#eee',
+                        ticks: [
+                            [2, '2am'],
+                            [3, '3am'],
+                            [4, '4am'],
+                            [5, '5am'],
+                            [6, '6am'],
+                            [7, '7am'],
+                            [8, '8am'],
+                            [9, '9am'],
+                            [10, '1pm'],
+                            [11, '2pm'],
+                            [12, '3pm'],
+                            [13, '4pm']
+                        ],
+                        font:
+                        {
+                            color: '#999',
+                            size: 9
+                        }
+                    }
+                });
+
+
+            });
+
+        </script>
