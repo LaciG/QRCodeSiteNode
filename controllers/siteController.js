@@ -9,3 +9,7 @@ exports.index = (req, res) => {
 exports.home = (req, res) => { //Ide már a belogolt user kell, megírni majd a login processt, most csak visual miatt simán rendereli
     res.render('home', {layout: 'layout.hbs', title: 'Dashboard'})
 }
+
+exports.getEventApplicants = (req, res) => {
+    res.render('eventApplicants', {layout: 'layout.hbs', title: 'Résztvevők'}) // Title legyen esemény neve + Dátum az Excel report miatt
+}
