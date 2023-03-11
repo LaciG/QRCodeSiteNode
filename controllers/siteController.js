@@ -13,3 +13,7 @@ exports.home = (req, res) => { //Ide már a belogolt user kell, megírni majd a 
 exports.getEventApplicants = (req, res) => {
     res.render('eventApplicants', {layout: 'layout.hbs', title: 'Résztvevők'}) // Title legyen esemény neve + Dátum az Excel report miatt
 }
+
+exports.getAllEvent = (req, res) => {
+    res.render('eventAll', {layout: 'layout.hbs', title: 'Összes esemény'})
+}
